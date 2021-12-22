@@ -1,0 +1,115 @@
+@media screen and (min-width: 1440px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+  }
+  .wrap_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1296px;
+    height: 72px;
+    margin: 0 auto;
+  }
+  .header_logo {
+    font-size: 28px;
+    font-weight: normal;
+  }
+  .header_list {
+    display: flex;
+  }
+  .header_list li a {
+    display: block;
+    height: 72px;
+    padding: 0 28px;
+    line-height: 72px;
+    font-weight: 700;
+  }
+  .header_util {
+    display: flex;
+  }
+  .header_util button {
+    width: 36px;
+    height: 36px;
+    margin-left: 12px;
+  }
+  .header_util button:first-child {
+    margin: 0;
+  }
+
+  footer {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ebebeb;
+    font-size: 14px;
+  }
+
+  .wrap_footer {
+    width: 1296px;
+    margin: 0 auto;
+    padding: 37px 0 48px 0;
+  }
+
+  .wrap_footer section {
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+  }
+  .footer_section1 > div {
+    width: 16.666%;
+  }
+  .footer_section1 a {
+    font-weight: bold;
+  }
+  .footer_section1 ul li {
+    margin-top: 12px;
+  }
+  .footer_section2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  .footer-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-group_info {
+    display: flex;
+  }
+  .footer-group_info div {
+    margin-left: 24px;
+  }
+  .footer-group_info div:first-child {
+    margin-left: 0;
+  }
+  .footer-group_info div a {
+    font-size: 12px;
+  }
+
+  /* .footer-group_rel {
+    } */
+
+  .footer_relbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 208px;
+    height: 40px;
+    background: #eee;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+  }
+  .footer_relbox > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px 12px;
+  }
+}

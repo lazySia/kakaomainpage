@@ -15,6 +15,10 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/darkmode.css">
+    <script src="js/index.js"></script>
+    
   </head>
   <body>
     <header>
@@ -29,31 +33,89 @@
         <div class="header_util">
           <button><i class="fas fa-search fa-lg"></i></button>
           <button><i class="fas fa-globe fa-lg"></i></button>
-          <button><i class="far fa-moon fa-lg"></i></button>
-          <button><i class="far fa-sun fa-lg"></i></button>
+          <button onclick="darkMode()"  class="lightbtn"><i class="far fa-moon fa-lg"></i></button>
+          <button onclick="darkMode()" class="darkbtn dpnone"><i class="far fa-sun fa-lg"></i></button>
         </div>
       </div>
     </header>
     <main>
-      <section>
-        <section>
+      <section class="innersec">
+        <section
+        class="wrap_tit dpnone">
           <div>
-            <img
-              src="https://www.kakaocorp.com/page/calendar/light/ico_date22.gif"
-            />
+            <img src="imgs/png/date22.png" alt="">
             <strong>오늘의 카카오</strong>
           </div>
         </section>
         <div class="main-content">
           <article>
             <!-- 양옆 마진잡고 아래 패딩 넣을 곳 -->
-            <h3>오늘의 카카오 <span>12월 22일 수요일 소식입니다</span></h3>
-            <div class="content"></div>
+            <h3 class="tit_date22">
+              <em>오늘의 카카오</em>
+              <span class="txt_tit">12월 22일 수요일 소식입니다
+                <span class="badge">1</span>
+              </span>
+            </h3>
+            <div class="content">
+              <div class="section_home">
+                <div class="wrap_item">
+                  <div class="main_cont">메인입니다</div>
+                </div>
+                <div class="wrap_item">
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                </div>
+              </div>
+              <div class="wrap_culture">
+                <span>기술과 사람으로 더 나은 세상을 만듭니다.</span>
+                <div><a href="#">카카오문화 바로가기 ➔</a></div>
+                <img src="imgs/bg_culture_big.png" alt="">
+                <img class="dpnone" src="imgs/bg_culture_small.png" alt="">
+              </div>
+              <div class="section_home section_home2">
+                <div class="wrap_item">
+                  <div class="main_cont">메인입니다</div>
+                </div>
+                <div class="wrap_item ">
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                  <div class="sub_cont">서브입니다</div>
+                </div>
+              </div>
+              <div class="wrap_etc">
+                <div class="etc_cont">
+                  <a href="#">
+                    <strong class="etc_cont_tit">사람과 기술로 일상을 돕는 카카오 서비스</strong>
+                    <div class="etc_cont_sub">
+                      <span>서비스 바로가기 ➔</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="etc_cont">
+                  <a href="#">
+                    <strong class="etc_cont_tit">세상만사에 관심이 많다면, 당신은 이미 카카오 크루</strong>
+                    <div class="etc_cont_sub">
+                      <span>인재영업 바로가기 ↗︎</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </section>
     </main>
-
     <footer>
       <div class="wrap_footer">
         <section class="footer_section1">

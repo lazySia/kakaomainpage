@@ -1,0 +1,41 @@
+.dpnone {
+  display: none;
+}
+
+.dark-mode {
+  background: #000;
+  color: #fff;
+}
+
+.dark-mode header {
+  background: #000;
+}
+
+.dark-mode a {
+  color: #fff;
+}
+
+.dark-mode button {
+  background: #000;
+  color: #fff;
+}
+
+.dark-mode .footer_relbox {
+  background: #222224;
+}
+.dark-mode .footer_relbox i {
+  color: #fff;
+}
+
+/* ----- index.css ----- */
+.dark-mode .tit_date22 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: url(../imgs/dark/date22.gif) no-repeat 0 94px;
+  background-size: 72px 72px;
+}
+
+.dark-mode .wrap_item div {
+  background: #222224;
+}
