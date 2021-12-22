@@ -1,0 +1,35 @@
+@media screen and (min-width: 1440px) {
+  .wrap_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1296px;
+    height: 72px;
+    margin: 0 auto;
+  }
+  .header_logo {
+    font-size: 28px;
+    font-weight: normal;
+  }
+  .header_list {
+    display: flex;
+  }
+  .header_list li a {
+    display: block;
+    height: 72px;
+    padding: 0 28px;
+    line-height: 72px;
+    font-weight: 700;
+  }
+  .header_util {
+    display: flex;
+  }
+  .header_util button {
+    width: 36px;
+    height: 36px;
+    margin-left: 12px;
+  }
+  .header_util button:first-child {
+    margin: 0;
+  }
+}
