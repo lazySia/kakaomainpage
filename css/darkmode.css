@@ -39,3 +39,11 @@
 .dark-mode .wrap_item div {
   background: #222224;
 }
+
+.dark-mode .collection_link {
+  background: #333;
+  color: #fff;
+}
+ㅈ .dark-mode .collection_link:hover {
+  background-color: #444;
+}

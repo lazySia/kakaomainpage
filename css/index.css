@@ -21,6 +21,7 @@
 .main-content article {
   width: 1296px;
   margin: 0 auto;
+  padding-bottom: 182px;
 }
 
 .main-content > article h3 {
@@ -185,6 +186,7 @@
   max-width: 430px;
   font-size: 32px;
   font-weight: bold;
+  color: #000;
   line-height: 44px;
   word-break: keep-all;
 }
@@ -195,12 +197,25 @@
   height: 33px;
   font-size: 14px;
   color: #fff;
-  /* margin: 0 auto; */
+  margin: 0 auto 0 0;
   margin-top: 24px;
   padding: 9px 20px;
   background: #000;
   border-radius: 42px;
 }
 
-.etc_cont_sub span {
+.collection_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 60px;
+  margin: 84px auto 0;
+  background: #eee;
+  border-radius: 60px;
+  font-size: 18px;
+}
+
+.collection_link:hover {
+  background-color: #dfdfdf;
 }
