@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/datelight.css">
+    <link rel="stylesheet" href="css/datedark.css">
     <script src="js/date.js"></script>
     <script src="js/index.js"></script>
     
@@ -26,10 +28,30 @@
       <div class="wrap_header">
         <h1 class="header_logo"><a>kakao</a></h1>
         <ul class="header_list">
-          <li><a href="#">카카오</a></li>
+          <li>
+            <a href="#" onclick="submenu1()">카카오</a>
+            <ul id="submenu1" class="submenu dpnone">
+              <li><a>카카오 문화</a></li>
+              <li><a>공동체</a></li>
+              <li><a>히스토리</a></li>
+            </ul>
+          </li>
           <li><a href="#">뉴스</a></li>
-          <li><a href="#">기술과 서비스</a></li>
-          <li><a href="#">약속과 책임</a></li>
+          <li >
+            <a href="#" onclick="submenu2()">기술과 서비스</a>
+            <ul id="submenu2" class="submenu dpnone">
+              <li><a>기술</a></li>
+              <li><a>서비스</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" onclick="submenu3()">약속과 책임</a>
+            <ul id="submenu3" class="submenu dpnone">
+              <li><a>ESG</a></li>
+              <li><a>소셜임팩트</a></li>
+              <li><a>디지털 권리</a></li>
+              <li><a>AI 윤리</a></li>
+            </ul></li>
         </ul>
         <div class="header_util">
           <button>
@@ -37,13 +59,12 @@
           </button>
           <button>
             <i class="fas fa-globe "></i>
-          </button>
-          <button onclick="darkMode()"  class="lightbtn">
-
+          </button> 
+          <button onclick="darkMode()" id="lightbtn">
             <i class="far fa-lightbulb"></i>
-            <i class="fas fa-lightbulb dpnone"></i>
-
-          <button onclick="darkMode()" class="darkbtn dpnone"><i class="far fa-sun "></i></button>
+          <button onclick="darkMode()" id="darkbtn" class="dpnone">
+            <i class="fas fa-lightbulb"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -59,9 +80,9 @@
         <div class="main-content">
           <article>
             <!-- 양옆 마진잡고 아래 패딩 넣을 곳 -->
-            <h3 class="tit_date">
+            <h3 id="tit_date">
               <em>오늘의 카카오</em>
-              <span id="txt_tit">
+              <span id="tit_txt">
                 <!-- <span class="badge">1</span> -->
               </span>
             </h3>
@@ -196,7 +217,7 @@
               </div>
               <div>
                   <div>
-                <a style="font-weight:bold; color:#000;">위치기반서비스이용약관</a>
+                <a class="boldone">위치기반서비스이용약관</a>
                 <i class="fas fa-angle-down"></i>
                 </div>
                 <!-- <ul>
@@ -207,7 +228,7 @@
               </div>
               <div>
                   <div>
-                <a style="font-weight:bold; color:#000;">개인정보처리방침</a>
+                <a class="boldone">개인정보처리방침</a>
                 <i class="fas fa-angle-down"></i>
                 </div>
                 <!-- <ul>
@@ -273,5 +294,7 @@
         </section>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </body>
 </html>

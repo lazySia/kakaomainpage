@@ -52,18 +52,21 @@ SVG Icons - svgicons.sparkk.fr
     padding-top: 96px;
   }
 
-  .tit_date {
+  #tit_date {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: url(../imgs/light/date22.gif) no-repeat 0 94px;
+    background-repeat: no-repeat;
+    background-position: 0 94px;
+    /* background-image: url(../imgs/light/date22.gif); */
+    /* background: url(../imgs/light/date22.gif) no-repeat 0 94px; */
     background-size: 72px 72px;
   }
-  .tit_date em {
+  #tit_date em {
     padding-left: 84px;
   }
 
-  .tit_date .badge {
+  #tit_date .badge {
     display: inline-block;
     min-width: 26px;
     padding: 6px 8px 7px 7px;

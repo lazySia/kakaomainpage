@@ -19,14 +19,13 @@ function changeTitle() {
     day = "토요일";
   }
 
-  document.getElementById("txt_tit").innerText = `${
+  document.getElementById("tit_txt").innerText = `${
     month + 1
   }월 ${date}일 ${day} 소식입니다`;
 
-  var tit_date;
-
   for (var i = 1; i <= 31; i++) {
-    if (i == date) {
+    if (date == i) {
+      document.getElementById("tit_date").classList = `tit_date${i}`;
     }
   }
 }

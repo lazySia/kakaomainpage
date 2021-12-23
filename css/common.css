@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     background: #fff;
-    z-index: 999;
+    z-index: 100;
   }
   .wrap_header {
     display: flex;
@@ -24,13 +24,63 @@
   .header_list {
     display: flex;
   }
-  .header_list li a {
+
+  .header_list:hover > li > a {
+    color: #888;
+  }
+  .header_list > li > a:hover {
+    color: #000;
+  }
+
+  .header_list > li > a {
     display: block;
     height: 72px;
     padding: 0 28px;
     line-height: 72px;
     font-weight: 700;
   }
+
+  .header_list > li {
+    position: relative;
+  }
+
+  .header_list > li:first-child .submenu {
+    width: 267px;
+  }
+
+  .header_list > li:nth-child(3) .submenu {
+    width: 142px;
+  }
+
+  .header_list > li:last-child .submenu {
+    width: 344px;
+  }
+
+  .submenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 4px;
+    height: 48px;
+    padding: 0 24.5px;
+    background: #000;
+    border-radius: 24px;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+
+  .submenu > li > a {
+    display: block;
+    padding: 15px 0;
+    color: #eeeeee;
+  }
+
+  .submenu > li > a:hover {
+    font-weight: bold;
+  }
+
   .header_util {
     display: flex;
   }
@@ -93,10 +143,16 @@
   .footer-group_info div:first-child {
     margin-left: 0;
   }
+
   .footer-group_info div a,
   .footer-group_info div i {
     font-size: 12px;
     color: #888;
+  }
+
+  .footer-group_info div a.boldone {
+    font-weight: bold;
+    color: #000;
   }
 
   /* .footer-group_rel {
