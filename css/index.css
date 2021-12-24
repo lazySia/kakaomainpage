@@ -1,43 +1,30 @@
 /* 4K */
 @media screen and (min-width: 1440px) {
-  /* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-
-  .svg-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .svg-icon path,
-  .svg-icon polygon,
-  .svg-icon rect {
-    fill: #000;
-  }
-
-  .svg-icon circle {
-    stroke: #000;
-    stroke-width: 1;
-  }
-
   .innersec {
     padding-top: 72px;
   }
 
   .wrap_tit {
-    width: 1296px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    border: 1px solid #000;
   }
 
   .wrap_tit div {
     display: flex;
     align-items: center;
+    width: 1296px;
+    margin: 0 auto;
   }
 
   .wrap_tit img {
     width: 36px;
     height: 36px;
     margin-right: 7px;
+  }
+  .wrap_tit strong {
+    font-size: 18px;
   }
 
   .main-content article {
@@ -90,13 +77,12 @@ SVG Icons - svgicons.sparkk.fr
     justify-content: center;
   }
 
-  .wrap_item div {
+  .wrap_item > div {
     box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
   }
 
-  .wrap_item div:hover {
+  .wrap_item > div:hover {
     transform: translateY(-5px);
     box-shadow: 4px 12px 20px 6px rgb(0 0 0 / 18%);
   }
@@ -110,6 +96,46 @@ SVG Icons - svgicons.sparkk.fr
     padding: 25px 24px 0;
     box-sizing: border-box;
   }
+  .cont_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+  }
+  .cont_header > div {
+    display: flex;
+  }
+  .main_cont img {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+  .cont_header > div > span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 34px;
+    padding: 0 13px;
+    font-size: 13px;
+    border-radius: 13px;
+    background: #eee;
+  }
+
+  .main_cont span:before {
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 16px;
+    height: 16px;
+    background: url(../imgs/item/talk.svg);
+    content: "";
+  }
+  .main_cont button i {
+    display: block;
+    color: #bbb;
+    font-size: 20px;
+  }
+
   .sub_cont {
     border-radius: 20px;
     width: 297px;
