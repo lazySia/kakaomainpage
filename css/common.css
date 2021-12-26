@@ -162,28 +162,61 @@
   /* .footer-group_rel {
     } */
 
-  .footer_relbox {
+  .footer_relbox > a {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 208px;
     height: 40px;
+    padding: 10px 20px 12px;
     background: #eee;
     border-radius: 24px;
     font-size: 12px;
     font-weight: 400;
     color: #000;
+    box-sizing: border-box;
   }
   .footer_relbox > div {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 20px 12px;
     font-weight: bold;
   }
   .footer_section2 small,
   .footer_section2 small > a {
     color: #888;
+  }
+
+  .footer_main {
+    position: relative;
+  }
+
+  .footer_sub {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    padding: 16px 0;
+    background: #eee;
+    border-radius: 12px;
+    display: none;
+  }
+
+  .footer_sub li {
+    margin-top: 12px;
+    padding: 0 20px;
+    white-space: nowrap;
+  }
+
+  .footer_sub li:first-child {
+    margin: 0;
+  }
+
+  .footer_main:hover .footer_sub {
+    display: block;
+  }
+
+  .rel_sub {
+    width: 100%;
   }
 }
 
