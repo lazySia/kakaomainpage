@@ -105,7 +105,8 @@
   .cont_header > div {
     display: flex;
   }
-  .main_cont img {
+  .main_cont img,
+  .sub_cont img {
     width: 36px;
     height: 36px;
     margin-right: 8px;
@@ -121,7 +122,8 @@
     background: #eee;
   }
 
-  .main_cont span:before {
+  .main_cont span:before,
+  .sub_cont span:before {
     position: absolute;
     top: 0;
     left: -4px;
@@ -130,7 +132,8 @@
     background: url(../imgs/item/talk.svg);
     content: "";
   }
-  .main_cont button i {
+  .main_cont button i,
+  .sub_cont button i {
     display: block;
     color: #bbb;
     font-size: 20px;
