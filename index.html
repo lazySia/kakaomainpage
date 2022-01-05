@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>카카오 페이지 클론</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
@@ -30,23 +31,25 @@
         <ul class="header_list">
           <li>
             <a href="#">카카오</a>
-            <ul class="submenu">
+            <ul class="submenu dpnone">
               <li><a>카카오 문화</a></li>
               <li><a>공동체</a></li>
               <li><a>히스토리</a></li>
             </ul>
           </li>
-          <li><a href="#">뉴스</a></li>
+          <li>
+            <a href="#">뉴스</a>
+            <ul class="submenu dpnone"></ul></li>
           <li>
             <a href="#">기술과 서비스</a>
-            <ul class="submenu">
+            <ul class="submenu dpnone">
               <li><a>기술</a></li>
               <li><a>서비스</a></li>
             </ul>
           </li>
           <li>
             <a href="#">약속과 책임</a>
-            <ul class="submenu">
+            <ul class="submenu dpnone">
               <li><a>ESG</a></li>
               <li><a>소셜임팩트</a></li>
               <li><a>디지털 권리</a></li>
@@ -60,9 +63,9 @@
           <button>
             <i class="fas fa-globe "></i>
           </button> 
-          <button onclick="darkMode()" id="lightbtn">
+          <button id="lightbtn">
             <i class="far fa-lightbulb"></i>
-          <button onclick="darkMode()" id="darkbtn" class="dpnone">
+          <button id="darkbtn" class="dpnone">
             <i class="fas fa-lightbulb"></i>
           </button>
         </div>

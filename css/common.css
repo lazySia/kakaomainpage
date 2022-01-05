@@ -57,7 +57,10 @@
   }
 
   .submenu {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* display: none; */
     position: absolute;
     top: 60px;
     left: 4px;
@@ -69,11 +72,11 @@
     z-index: 100;
   }
 
-  .header_list > li:hover ul {
+  /* .header_list > li:hover ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
+    align-items: center; 
+  } */
 
   .submenu > li > a {
     display: block;

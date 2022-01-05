@@ -1,11 +1,22 @@
-// $(document).ready(function () {
-function darkMode() {
-  var body = document.body;
-  var date = document.getElementsByClassName("tit_date22");
-  var lightbtn = document.getElementById("lightbtn");
-  var darkbtn = document.getElementById("darkbtn");
-  body.classList.toggle("dark-mode");
-  date.classList.toggle("dark-mode");
-  lightbtn.classList.toggle("dpnone");
-  darkbtn.classList.toggle("dpnone");
-}
+$(document).ready(function () {
+  $("#lightbtn").click(function () {
+    $(this).addClass("dpnone");
+    $("#darkbtn").removeClass("dpnone");
+    $("body").addClass("dark-mode");
+  });
+  $("#darkbtn").click(function () {
+    $(this).addClass("dpnone");
+    $("#lightbtn").removeClass("dpnone");
+    $("body").removeClass("dark-mode");
+  });
+
+  $(".header_list li").mouseover(function () {
+    var index = $(this).index();
+    if (index != 1) {
+      $(".header_list li ul").eq(index).removeClass("dpnone");
+      $(this).mouseleave(function () {
+        $(".header_list li ul").eq(index).addClass("dpnone");
+      });
+    }
+  });
+});
