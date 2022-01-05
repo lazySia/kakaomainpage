@@ -24,9 +24,6 @@ $(document).ready(function () {
     var i1 = $(this).children("a").children("i:first-child");
     var i2 = $(this).children("a").children("i:nth-child(2)");
     submenu.toggleClass("dpnone");
-    // $(this).mouseleave(function () {
-    //   submenu.addClass("dpnone");
-    // });
     i1.toggleClass("dpnone");
     i2.toggleClass("dpnone");
   });
@@ -37,4 +34,30 @@ $(document).ready(function () {
     $(".fa-plus").toggleClass("dpnone");
     $(".fa-times").toggleClass("dpnone");
   });
+
+  var current = document.documentElement.scrollTop || 0;
+  document.addEventListener("scroll", function () {
+    let documentY = document.documentElement.scrollTop;
+    documentY - current >= 0
+      ? $("header").addClass("dpnone")
+      : $("header").removeClass("dpnone");
+    current = documentY; // Update scrollY
+  });
+
+  // window.__scrollPosition = $(window).scrollTop();
+  // console.log(window.__scrollPosition);
+  // document.addEventListener("scroll", function () {
+  //   var position = $(window).scrollTop();
+  //   var updown = position - window.__scrollPosition >= 0 ? 1 : -1;
+  //   console.log(updown);
+  //   if (position > 160) {
+  //     $("header").addClass("dpnone");
+  //   }
+  //   if (updown < 0) {
+  //     $("header").removeClass("dpnone");
+  //   }
+  // });
+  // document.addEventListener("scroll", function () {
+  //   $(".wrap_tit").removeClass("dpnone");
+  // });
 });
