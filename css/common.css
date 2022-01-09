@@ -6,8 +6,10 @@
     left: 0;
     width: 100%;
     background: #fff;
-    z-index: 100;
+    z-index: 999;
+    /* transition: top 0.2s ease-in-out; */
   }
+
   .wrap_header {
     display: flex;
     justify-content: space-between;

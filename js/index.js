@@ -1,4 +1,35 @@
 $(document).ready(function () {
+  var today = new Date();
+  var month = today.getMonth();
+  var date = today.getDate();
+  var day = today.getDay();
+  if (day == 0) {
+    day = "일요일";
+  } else if (day == 1) {
+    day = "월요일";
+  } else if (day == 2) {
+    day = "화요일";
+  } else if (day == 3) {
+    day = "수요일";
+  } else if (day == 4) {
+    day = "목요일";
+  } else if (day == 5) {
+    day = "금요일";
+  } else if (day == 6) {
+    day = "토요일";
+  }
+
+  document.getElementById("tit_txt").innerText = `${
+    month + 1
+  }월 ${date}일 ${day} 소식입니다`;
+
+  for (var i = 1; i <= 31; i++) {
+    if (date == i) {
+      document.getElementById("tit_date").classList = `tit_date${i}`;
+      document.getElementById("wrap_tit_date").classList = `tit_date${i}`;
+    }
+  }
+
   $("#lightbtn").click(function () {
     $(this).addClass("dpnone");
     $("#darkbtn").removeClass("dpnone");
@@ -38,26 +69,27 @@ $(document).ready(function () {
   var current = document.documentElement.scrollTop || 0;
   document.addEventListener("scroll", function () {
     let documentY = document.documentElement.scrollTop;
-    documentY - current >= 0
-      ? $("header").addClass("dpnone")
-      : $("header").removeClass("dpnone");
-    current = documentY; // Update scrollY
-  });
+    if (documentY != 0) {
+      $("header").css({ "border-bottom": "1px solid #eee" });
+    } else {
+      $("header").css({ "border-bottom": 0 });
+    }
 
-  // window.__scrollPosition = $(window).scrollTop();
-  // console.log(window.__scrollPosition);
-  // document.addEventListener("scroll", function () {
-  //   var position = $(window).scrollTop();
-  //   var updown = position - window.__scrollPosition >= 0 ? 1 : -1;
-  //   console.log(updown);
-  //   if (position > 160) {
-  //     $("header").addClass("dpnone");
-  //   }
-  //   if (updown < 0) {
-  //     $("header").removeClass("dpnone");
-  //   }
-  // });
-  // document.addEventListener("scroll", function () {
-  //   $(".wrap_tit").removeClass("dpnone");
-  // });
+    if (documentY > 150) {
+      $(".wrap_tit").removeClass("dpnone");
+    } else {
+      $(".wrap_tit").addClass("dpnone");
+    }
+
+    if (documentY > 155) {
+      $("header").css({ top: "-73px" });
+      $(".wrap_tit").css({ top: "-1px" });
+    }
+    if (documentY - current < 0) {
+      $("header").css({ top: 0 });
+      $(".wrap_tit").css({ top: "72px" });
+    }
+
+    current = documentY; // Update
+  });
 });
